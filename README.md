@@ -382,7 +382,7 @@ are numbers, `name` is a string.
 ### bus.deviceIdSync(addr)
 - addr - I2C device address
 
-Synchronous I2C device Id. Returns an object with the properties 
+Synchronous I2C device Id. Returns an object with the properties
 `manufacturer`, `product` and if known a human readable `name` for the
 associated manufacturer. `manufacturer` and `product` are numbers, `name` is a
 string.
@@ -391,7 +391,7 @@ string.
 - addr - I2C device address
 - length - an integer specifying the number of bytes to read
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance that the data will be written to (must conatin at least length bytes)
+instance that the data will be written to (must contain at least length bytes)
 - cb - completion callback
 
 Asynchronous plain I2C read. The callback gets three argument (err, bytesRead, buffer).
@@ -401,7 +401,7 @@ bytesRead is the number of bytes read.
 - addr - I2C device address
 - length - an integer specifying the number of bytes to read
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance that the data will be written to (must conatin at least length bytes)
+instance that the data will be written to (must contain at least length bytes)
 
 Synchronous plain I2C read. Returns the number of bytes read.
 
@@ -409,7 +409,7 @@ Synchronous plain I2C read. Returns the number of bytes read.
 - addr - I2C device address
 - length - an integer specifying the number of bytes to write
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance containing the data to write (must conatin at least length bytes)
+instance containing the data to write (must contain at least length bytes)
 - cb - completion callback
 
 Asynchronous plain I2C write. The callback gets three argument (err, bytesWritten, buffer).
@@ -419,7 +419,7 @@ bytesWritten is the number of bytes written.
 - addr - I2C device address
 - length - an integer specifying the number of bytes to write
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html) instance
-containing the data to write (must conatin at least length bytes)
+containing the data to write (must contain at least length bytes)
 
 Synchronous plain I2C write. Returns the number of bytes written.
 
@@ -458,7 +458,7 @@ integer in the range 0 to 65535.
 - cmd - command code
 - length - an integer specifying the number of bytes to read (max 32)
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance that the data will be written to (must conatin at least length bytes)
+instance that the data will be written to (must contain at least length bytes)
 - cb - completion callback
 
 Asynchronous I2C block read (not defined by the SMBus specification). Reads a
@@ -471,7 +471,7 @@ the number of bytes read.
 - cmd - command code
 - length - an integer specifying the number of bytes to read (max 32)
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance that the data will be written to (must conatin at least length bytes)
+instance that the data will be written to (must contain at least length bytes)
 
 Synchronous I2C block read (not defined by the SMBus specification). Reads a
 block of bytes from a device, from a designated register that is specified by
@@ -552,7 +552,7 @@ Synchronous SMBus quick command. Writes a single bit to the device.
 - cmd - command code
 - length - an integer specifying the number of bytes to write (max 32)
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance containing the data to write (must conatin at least length bytes)
+instance containing the data to write (must contain at least length bytes)
 - cb - completion callback
 
 Asynchronous I2C block write (not defined by the SMBus specification). Writes a
@@ -565,7 +565,7 @@ the number of bytes written.
 - cmd - command code
 - length - an integer specifying the number of bytes to write (max 32)
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance containing the data to write (must conatin at least length bytes)
+instance containing the data to write (must contain at least length bytes)
 
 Synchronous I2C block write (not defined by the SMBus specification). Writes a
 block of bytes to a device, to a designated register that is specified by cmd.
@@ -614,7 +614,7 @@ numbers, `name` is a string.
 - addr - I2C device address
 - length - an integer specifying the number of bytes to read
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance that the data will be written to (must conatin at least length bytes)
+instance that the data will be written to (must contain at least length bytes)
 
 Asynchronous plain I2C read. Returns a Promise that on success will be
 resolved with an object with a bytesRead property identifying the number of
@@ -625,7 +625,7 @@ argument. The returned Promise will be rejected if an error occurs.
 - addr - I2C device address
 - length - an integer specifying the number of bytes to write
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance containing the data to write (must conatin at least length bytes)
+instance containing the data to write (must contain at least length bytes)
 
 Asynchronous plain I2C write. Returns a Promise that on success will be
 resolved with an object with a bytesWritten property identifying the number of
@@ -653,7 +653,7 @@ occurs. word is an unsigned integer in the range 0 to 65535.
 - cmd - command code
 - length - an integer specifying the number of bytes to read (max 32)
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance that the data will be written to (must conatin at least length bytes)
+instance that the data will be written to (must contain at least length bytes)
 
 Asynchronous I2C block read (not defined by the SMBus specification). Reads a
 block of bytes from a device, from a designated register that is specified by
@@ -705,7 +705,7 @@ rejected if an error occurs.
 - cmd - command code
 - length - an integer specifying the number of bytes to write (max 32)
 - buffer - the [Buffer](https://nodejs.org/dist/latest/docs/api/buffer.html)
-instance containing the data to write (must conatin at least length bytes)
+instance containing the data to write (must contain at least length bytes)
 
 Asynchronous I2C block write (not defined by the SMBus specification). Writes a
 block of bytes to a device, to a designated register that is specified by cmd.
@@ -793,4 +793,3 @@ Specifies whether or not the adapter handles the SMBus write i2c block command
 TypeScript type definitions for i2c-bus can be found in the Definitely Typed
 repository at
 https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/i2c-bus.
-
